@@ -1,4 +1,11 @@
 &pointing_listener {
     status = "okay";
     device = <&pointing_device>;
+    input-processors = <&auto_mouse_layer 1 500>;
+
+    scroll_layer {
+        layers = <4>;
+        input-processors = <&zip_scroll_transform>;
+        process-next;
+    };
 };
