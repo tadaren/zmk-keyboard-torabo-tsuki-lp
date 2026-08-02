@@ -9,8 +9,8 @@
     auto_mouse_layer: auto_mouse_layer {
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
-        // Mouse buttons on layer 1 must not deactivate the temporary layer.
-        excluded-positions = <33 34 46 47 48>;
+        // Mouse buttons and the scroll-layer key must not deactivate the temporary layer.
+        excluded-positions = <33 34 46 47 48 64>;
     };
 
     combos {

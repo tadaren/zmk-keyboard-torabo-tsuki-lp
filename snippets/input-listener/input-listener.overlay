@@ -1,11 +1,12 @@
 &pointing_listener {
     status = "okay";
     device = <&pointing_device>;
-    input-processors = <&auto_mouse_layer 1 500>;
+    input-processors = <&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
+                       <&auto_mouse_layer 1 500>;
 
     scroll_layer {
         layers = <4>;
-        input-processors = <&zip_scroll_transform 0>;
+        input-processors = <&zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>;
         process-next;
     };
 };
